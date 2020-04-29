@@ -13,12 +13,13 @@
 #include <time.h>
 
 int main(void){
-	time_t t = time(NULL);
-	struct tm tm = *localtime(&t);
+	time_t t = time(NULL); // time() 함수에서 사용하는 time_t 지정
+	struct tm tm = *localtime(&t); // t를 struct tm 값으로 변환
+	// tm_year(년), tm_mon(월), tm_mday(일), tm_hour(시), tm_min(분), tm_sec(초) 등
 
 	int birth_year; // 태어난 년도
 	int age; // 나이
-	int p_year = tm.tm_year + 1900; // 현재 년도
+	int p_year = tm.tm_year + 1900; // 현재 년도(tm_year는 1900년도부터 세기때문에 +1900)
 
 	printf("Birth year? \n");
 	scanf("%d", &birth_year);
