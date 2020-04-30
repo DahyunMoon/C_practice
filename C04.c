@@ -27,11 +27,11 @@ int main(void) {
 	printf("Math?");
 	scanf("%d", &math);
 
-	total = kor+eng+math;
-	average = total/3.0;
+	total = kor+eng+math; // 총점 계산
+	average = total/3.0; // 평균 계산
 
 	printf("total is %d\n", total);
-	printf("average is %.1f\n", average);
+	printf("average is %.1f\n", average); // 소숫점 한 자리까지 출력
 
 	return 0;
 }
