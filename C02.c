@@ -20,7 +20,7 @@ int main(void){
 	printf("height? ");
 	scanf("%d", &height);
 
-	area = width*height;
+	area = width*height; // 직사각형의 넓이 계산
 	printf("area is %d\n", area);
 
 	return 0;
