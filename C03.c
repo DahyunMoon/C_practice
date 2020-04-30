@@ -19,8 +19,8 @@ int main(void){
 	printf("m2_area? ");
 	scanf("%f", &m2_area);
 
-	pyung_area = m2_area / 3.305;
-	printf("pyung_area is %.1f\n", pyung_area);
+	pyung_area = m2_area / 3.305; // 평형 단위로 변환
+	printf("pyung_area is %.1f\n", pyung_area); // 소숫점 한 자리까지 출력
 
 	return 0;
 }
