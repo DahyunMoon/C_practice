@@ -21,13 +21,12 @@ int main(){
 	
 	time_t t = time(NULL);
 	struct tm tm = *localtime(&t);
-	p_year = tm.tm_mday;
+	p_year = tm.tm_year + 1900;
 
 	printf("Birth year? ");
 	scanf("%d", & birth_year);
 	
 	age = p_year - birth_year + 1;
-
 	if(age < 20)
 		printf("미성년자입니다.\n");
 	else
