@@ -27,9 +27,9 @@ int main(void) {
 	printf("넓이는 %d이고 ", area);
 
 	if(width==height)
-		printf("정사각형입니다.");
+		printf("정사각형입니다.\n");
 	else
-		printf("정사각형이 아닙니다.");
+		printf("정사각형이 아닙니다.\n");
 
 	return 0;
 }
