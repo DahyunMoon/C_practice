@@ -35,17 +35,16 @@ int main(){
 	printf("Birth year? ");
 	scanf("%d", &birth_year);
 	age = p_year - birth_year + 1;
-	printf("[DEBUG] age: %d\n", age);
 
 	if(age < 7)
 		printf("유아입니다.\n");
-	if(age > 6 && age < 13)
+	else if(age < 13)
 		printf("어린이입니다.\n");
-	if(age > 12 && age < 20);
+	else if(age < 20)
 		printf("청소년입니다.\n");
-	if(age > 19 && age < 30);
+	else if(age < 30)
 		printf("청년입니다.\n");
-	if(age > 29 && age < 60)
+	else if(age < 60)
 		printf("중년입니다.\n");
 	else
 		printf("노년입니다.\n");
