@@ -16,18 +16,14 @@
 int main(){
 	int height, weight; // 신장(cm), 체중(kg)
 	float bmi; // 비만도 수치
-	float m_height = height/100;
 
 	printf("height? ");
 	scanf("%d", &height);
-	printf("[DEBUG] height: %d\n", height);
-	printf("[DEBUG] m_height = %f\n", m_height);
+	float m_height = 0.01*height;
 	printf("weight? ");
 	scanf("%d", &weight);
-	printf("[DEBUG] weight: %d\n", weight);
 
 	bmi = weight / (m_height*m_height) ;	
-	printf("[DEBUG] BMI = %.f\n", bmi);
 
 	if(bmi < 25)
 		printf("You are not overweight.\n");
