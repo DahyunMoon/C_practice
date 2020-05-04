@@ -18,6 +18,24 @@
 
 # include <stdio.h>
 
-int(main){
+int main(){
+	int megabytes; // 용량(메가바이트 단위)
+	long bytes; // 용량(바이트 단위)
+	int usb2; // USB 2.0 사용여부(1: 예, 2: 아니요)
+	int time; // 전송시간(초 단위)
+
+	printf("파일 용량을 메가바이트 단위로 입력하세요. ");
+	scanf("%d", &megabytes);
+	bytes = megabytes * 1024 * 1024;
+	
+	printf("USB 포트가 2.0이면 1, 아니면 2를 입력하세요. ");
+	scanf("%d", &usb2);
+
+	if(usb2==1)
+		time = bytes/60000000;
+	else
+		time = bytes/1500000;
+		
+	printf("파일 전송시간은 %d초입니다.\n", time);
 	return 0;
 }
