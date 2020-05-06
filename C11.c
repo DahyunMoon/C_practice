@@ -30,7 +30,7 @@ int main(){
 
 	time_t t =  time(NULL);
 	struct tm tm = *localtime(&t);
-	p_year = tm.tm_year+1900;
+	p_year = tm.tm_year + 1900;
 
 	printf("Birth year? ");
 	scanf("%d", &birth_year);
