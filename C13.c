@@ -31,19 +31,23 @@ int main(){
 	int D_30[12] = {0, 0, 0, 4, 0, 6, 0, 0, 9, 0, 11, 0};
 
 	for(int i = 0; i < month-1; i++){
-
 		if(D_31[i] != 0)
 			day_count += 31;
 		else if(D_30[i] != 0)
 			day_count += 30;
 		else
 			day_count += 28;
-		
-		printf("[DEBUG] %d month, day = %d\n", i+1, day_count); 
 	}
 	day_count += day;
-
-	printf("이 날짜는 1년 중 %d번째 날에 해당됩니다.\n", day_count);
-
+	
+	if(D_31[month]!=0 && day < 32)
+		printf("이 날짜는 1년 중 %d번째 날에 해당됩니다.\n", day_count);
+	else if(D_30[month]!=0 && day < 31)
+		printf("이 날짜는 1년 중 %d번째 날에 해당됩니다.\n", day_count);
+	else if(day < 30)
+		printf("이 날짜는 1년 중 %d번째 날에 해당됩니다.\n", day_count);
+	else
+		printf("잘못 입력하셨습니다.\n");
+	
 	return 0;
 }
