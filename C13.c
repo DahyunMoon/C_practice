@@ -29,17 +29,17 @@ int main(){
 
 	int D_31[12] = {1, 0, 3, 0, 5, 0, 7, 8, 0, 10, 0, 12};
 	int D_30[12] = {0, 0, 0, 4, 0, 6, 0, 0, 9, 0, 11, 0};
-	int D_28[12] = {0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-	for(int i = 0; i < month; i++){
+	for(int i = 0; i < month-1; i++){
 
-
-		if(D_31 != 0)
+		if(D_31[i] != 0)
 			day_count += 31;
-		else if(D_30 != 0)
+		else if(D_30[i] != 0)
 			day_count += 30;
 		else
 			day_count += 28;
+		
+		printf("[DEBUG] %d month, day = %d\n", i+1, day_count); 
 	}
 	day_count += day;
 
