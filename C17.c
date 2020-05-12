@@ -23,7 +23,7 @@ int main(){
 		max_num = number;
 		min_num = number;
 		while(1){
-			printf("0부터 100사이의 숫자를 입력: ");
+			printf("0부터 100사이의 숫자를 입력 ");
 			scanf("%d", &number);
 
 			if(number < 0 || number > 100)
