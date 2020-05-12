@@ -19,9 +19,15 @@ int main(void) {
 
 	printf("year? ");
 	scanf("%d", &year);
-
-	printf("입력하신 년도는 윤년입니다.\n");
-	printf("입력하신 년도는 윤년이 아닙니다.\n");
+	
+	if(year % 4 == 0){
+		if(year % 100 == 0 && year % 400 != 0)
+			printf("입력하신 년도는 윤년이 아닙니다.\n");
+		else
+			printf("입력하신 년도는 윤년입니다.\n");
+	}
+	else		
+		printf("입력하신 년도는 윤년이 아닙니다.\n");
 
 	// 2000 - 윤년 // 1999 - 윤년X // 1900 - 윤년X // 2012 - 윤년
 	return 0;
