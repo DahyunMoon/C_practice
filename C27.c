@@ -24,7 +24,27 @@ int main(){
 		printf("%d번째 수를 입력하시오: ", i+1);
 		scanf("%d", &num[i]);
 	}
+
+	first = num[0];
+	for(i = 1; i < 10; i++)
+		if(first < num[i])
+			first = num[i];
 	
+	if(num[0] == first){
+		second = num[1];
+		second_max_index = 2;
+	}
+	else{
+		second = num[0];
+		second_max_index = 1;
+	}
+
+	for(i = 1; i < 10; i++)
+		if(second < num[i] && num[i] < first){
+			second = num[i];
+			second_max_index = i + 1;
+		}
+
 	printf("두번째로 큰 수는 %d번째 수 %d입니다.\n", second_max_index, second);
 
 	return 0;
