@@ -16,7 +16,6 @@
 int main(){
 	int number[5][3]; // 각 집의 거주자 수
 	int total = 0; // 아파트의 총 거주자 수
-	int ho; // 아파트 호를 나타내는 변수
 	int i, j;  // 반복문 사용을 위한 변수
 
 	for(i = 0; i < 5; i++){
