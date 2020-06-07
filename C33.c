@@ -42,3 +42,5 @@ int main(){
 
   return 0;
 }
+
+// putty에서 push가 안 됨..
