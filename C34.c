@@ -60,6 +60,7 @@ int main(){
   printf("국어 점수의 총점은 %d, 평균은 %.1f\n", sum_class[0], average_class[0]);
   printf("영어 점수의 총점은 %d, 평균은 %.1f\n", sum_class[1], average_class[1]);
   printf("수학 점수의 총점은 %d, 평균은 %.1f\n", sum_class[2], average_class[2]);
+  
   printf("2) 각 학생별 총점과 평균점수, 평균에 따른 등급\n");
   for(i = 0; i < 5; i ++)
     printf("%d번 학생의 총점은 %d, 평균은 %.1f (등급 %c)\n", i+1, sum_student[i], ave    rage_student[i], grade[i]);
